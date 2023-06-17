@@ -1,0 +1,171 @@
+:root{
+    font-size: 16px;
+    
+}
+
+h1 pre{
+    font-family: Kablammo, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.material-symbols-outlined{
+    margin-left: 95%;
+}
+
+span a{
+    color: #9b5de5;
+}
+
+hr{
+    margin: 10px 50px;
+    align-items: center;
+    border-color: #e0e1dd;
+    border-width: 1px;
+    border-style: solid;
+}
+
+body{
+    color: #e0e1dd;
+    background-color: #0d1b2a;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* SCROLL BAR  */
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: #0d1b2a;
+}
+body::-webkit-scrollbar-thumb{
+    background: #9b5de5;
+}
+
+main{
+    margin-left: 5rem;
+}
+
+.navbar{
+    position: fixed;
+    background-color: #1b263b;
+    border-radius: 0px;
+    transition:width 200ms ease-out;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-item{
+    width: 100%;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #e0e1dd;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(5);
+    transition: 600ms;
+    width: 5rem;
+    margin-left: 0.1rem;
+}
+
+.nav-link:hover{
+    width: 7rem;
+    /* background-color: #0d1b2a; */
+    filter: grayscale(0%)  opacity(1);
+    transition: 600ms;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+}
+ 
+
+.nav-link svg{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    height: 2rem;
+    fill: #778da9;
+}
+
+
+/* .navbar:hover .link-text{
+    display: block;
+} */
+
+.nav-link:hover svg{
+    height: 5rem;
+    fill: #9b5de5;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .navbar{
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-link:hover .link-text{
+        display: none;
+    }
+
+    .nav-link{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    main{
+        margin: 10px;
+        text-align: center;
+    }
+
+    #connect{
+        font-size: xx-small;
+         color: #e0e1dd;
+         display: none;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 600px){
+    .navbar{
+        top: 0;
+        width: 4rem;
+        height: 100vh;
+    }
+
+    .navbar:hover{
+        width: 20rem;
+    }
+
+    .nav-link:hover .link-text{
+        display: inline;
+        transition: opacity 600ms;
+    }
+
+    #connect{
+        font-size: xx-small;
+         color: #e0e1dd;
+    }
+}
